@@ -1,7 +1,13 @@
 const ngrok = require("ngrok");
 const axios = require("axios");
 
-const { NGROK_PORT, NGROK_AUTH, NGROK_AUTH_TOKEN, NGROK_REGION } = process.env;
+const {
+  NGROK_PORT,
+  NGROK_AUTH,
+  NGROK_AUTH_TOKEN,
+  NGROK_REGION,
+  NGROK_PROTOCOL,
+} = process.env;
 
 async function connect() {
   await ngrok.connect({
